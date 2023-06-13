@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+}
+
+img {
+    height: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.task:hover img {
+    opacity: 1;
+}
+
+.container {
+    width: 500px;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 100px auto 0;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: url(./img/mount-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.input-task {
+    border: none;
+    border-radius: 30px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.button-add-task {
+    border: none;
+    border-radius: 30px;
+    height: 40px;
+    background-color: #14d079f4;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 0 15px;
+    margin-left: 45px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.button-add-task:hover {
+    opacity: 0.8;
+}
+
+.button-add-task:active {
+    opacity: 0.6;
+}
+
+.list-tasks {
+    width: 100%;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.task {
+    background-color: #f2f2f2;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.done {
+    background: linear-gradient(45deg, #02d9ffee, #00ff8884);
+    text-decoration: line-through;
+    color: azure;
+}
+
+.titulo {
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.sub-titulo {
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: left;
+    font-size: medium;
+}
+
+/* Estilos para o footer */
+footer {
+    background-image: linear-gradient(to right, #02d9ffee, #00ff8884);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para os ícones */
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #000;
+}
+
+/* Estilos adicionais conforme necessário */
